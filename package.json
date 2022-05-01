@@ -11,6 +11,11 @@
   "files": [
     "out/*"
   ],
+  "workspaces": {
+    "packages": [
+      "infra"
+    ]
+  },
   "private": true,
   "main": "out/index.js",
   "typings": "out/index.d.ts",
