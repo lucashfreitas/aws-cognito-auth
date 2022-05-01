@@ -1,7 +1,13 @@
 {
+  "ts-node": {
+    "moduleTypes": {
+      "jest.config.ts": "cjs"
+    }
+  },
   "include": ["./src"],
   "exclude": ["node_modules", "out", "*.spec.ts"],
   "compilerOptions": {
+    
     "types": ["node", "jest"],
     "strictPropertyInitialization": false,
     "outDir": "out",

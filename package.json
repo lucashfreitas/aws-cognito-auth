@@ -15,6 +15,7 @@
   "main": "out/index.js",
   "typings": "out/index.d.ts",
   "types": "out/index.d.ts",
+  "type": "module",
   "scripts": {
     
     "aws-setup": "yarn zx scripts/aws-profile.mjs",
