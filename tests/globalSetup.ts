@@ -8,7 +8,6 @@ export default async function () {
   process.env.AWS_SANDBOX_COGNITO_CLIENT_SECRET = output.CognitoClientSecret;
   process.env.AWS_SANDBOX_COGNITO_USERPPOL_ID = output.CognitoUserPoolId;
 
-  console.log(`a`, process.env.AWS_ACCESS_KEY_ID)
   if (
     !process.env.AWS_ACCESS_KEY_ID ||
     !process.env.AWS_SECRET_ACCESS_KEY ||
