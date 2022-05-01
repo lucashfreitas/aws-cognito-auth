@@ -1,0 +1,47 @@
+{
+  "name": "aws-cognito-auth",
+  "version": "1.0.0",
+  "author": "Lucas Santos <lucashfreitas1@gmail.com> (https://github.com/lucashfreitas)",
+  "license": "Private",
+  "keywords": [
+    "aws-cognito",
+    "auth",
+    "aws-cdk"
+  ],
+  "files": [
+    "out/*"
+  ],
+  "private": true,
+  "main": "out/index.js",
+  "typings": "out/index.d.ts",
+  "types": "out/index.d.ts",
+  "scripts": {
+    
+    "aws-setup": "yarn zx scripts/aws-profile.mjs",
+    "infra:destroy": "npx zx scripts/cdk-destroy.mjs",
+    "infra:up": "yarn zx scripts/cdk-deploy.mjs",
+    "build": "yarn tsc",
+    "test:integration": "yarn jest --coverage",
+    "test:watch": "yarn jest --watch",
+    "test:coverage": "yarn jest --coverage"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.37.0",
+    "cross-fetch": "^3.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.5",
+    "jwks-rsa": "^2.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "ts-node": "^10.2.1",
+    "@types/node": "^16.10.2",
+    "@types/jsonwebtoken": "^8.5.5",
+    "dotenv": "^10.0.0",
+    "is-ci": "^3.0.1",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.6.4",
+    "zx": "^4.2.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "aws-cognito-auth-infra",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "Private",
+  "private": true,
+  "author": "Lucas Santos (lucashfreitas1@gmail.com)",
+  "scripts": {
+    "build": "npx tsc",
+    "copy-outputs": "cp './cdk-outputs.json' ./dist/",
+    "watch": "npx tsc -w",
+    "test": "jest",
+    "bootstrap": "npx cdk bootstrap",
+    "destroy": "yarn build && npx cdk destroy AwsCognitoTestStack",
+    "up": "yarn build && yarn  bootstrap && yarn synth:app && npx cdk deploy AwsCognitoTestStack --outputs-file ./cdk-outputs.json ",
+    "postup": "yarn copy-outputs",
+    "synth:app": "yarn build && npx cdk synth AwsCognitoTestStack"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.96",
+    "@aws-cdk/aws-applicationautoscaling": "^1.120.0",
+    "@aws-cdk/aws-certificatemanager": "^1.120.0",
+    "@aws-cdk/aws-cognito": "^1.125.0",
+    "@aws-cdk/aws-ec2": "^1.120.0",
+    "@aws-cdk/aws-ecr": "^1.120.0",
+    "@aws-cdk/aws-ecs": "^1.120.0",
+    "@aws-cdk/aws-rds": "^1.120.0",
+    "@aws-cdk/aws-secretsmanager": "^1.120.0",
+    "@aws-cdk/aws-ssm": "^1.120.0",
+    "@aws-cdk/core": "^1.120.0",
+    "@aws-cdk/custom-resources": "^1.128.0",
+    "@aws-sdk/client-cognito-identity": "^3.34.0",
+    "@types/node": "^16.10.2",
+    "aws-cdk": "^1.120.0",
+    "dotenv": "^10.0.0",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {}
+}

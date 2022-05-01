@@ -1,0 +1,14 @@
+.vscode
+tests
+yarn.lock
+.nyc_output
+.env
+.env.example
+.gitignore
+.taprc
+tsconfig.json
+node_modules
+coverage
+infra
+.github
+scripts
